@@ -3,9 +3,9 @@
 This repository contains the code, data, and documentation for our Intelligent Systems project in COMP 3608. Our goal is to utilize 3 datasets and three algorithms to identify fradulant credit card transactions.
 
 ## Group Members:
-Lorenzo Gould-Davies - 816033593
-Kaelon Colthrust - 816035625
-Anuradha Ramlakhan -  816030881
+* Lorenzo Gould-Davies - 816033593
+* Kaelon Colthrust - 816035625
+* Anuradha Ramlakhan -  816030881
 
 ## Problem Statement:
 Credit card fraud results in billions of dollars in losses annually for financial institutions and consumers. The ability to accurately detect fraudulent transactions in real-time is critical to minimize these losses. This project addresses the challenge of identifying fraudulent credit card transactions from a highly imbalanced dataset where legitimate transactions far outnumber fraudulent ones.
