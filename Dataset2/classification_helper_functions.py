@@ -44,7 +44,7 @@ def evaluate_classifier(model_values, model, model_name="New Classifier"):
         try:
             y_pred_proba = model.decision_function(X_test)
         except AttributeError:
-            print("⚠️ Model does not support probability or decision score. Skipping ROC-AUC.")
+            print("Model does not support probability or decision score. Skipping ROC-AUC.")
             y_pred_proba = None
 
     #evaluate the classification
