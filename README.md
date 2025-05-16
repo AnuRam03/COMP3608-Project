@@ -2,6 +2,14 @@
 
 This repository contains the code, data, and documentation for our Intelligent Systems project in COMP 3608. Our goal is to utilize 3 datasets and three algorithms to identify fradulant credit card transactions.
 
+## Group Members:
+Lorenzo Gould-Davies - 816033593
+Kaelon Colthrust - 816035625
+Anuradha Ramlakhan -  816030881
+
+## Problem Statement:
+Credit card fraud results in billions of dollars in losses annually for financial institutions and consumers. The ability to accurately detect fraudulent transactions in real-time is critical to minimize these losses. This project addresses the challenge of identifying fraudulent credit card transactions from a highly imbalanced dataset where legitimate transactions far outnumber fraudulent ones.
+
 ## Datasets:
 1. https://www.kaggle.com/datasets/nelgiriyewithana/credit-card-fraud-detection-dataset-2023 \
 This dataset contains credit card transactions made by European cardholders in the year 2023. It comprises over 550,000 records, and the data has been anonymized to protect the cardholders' identities.
