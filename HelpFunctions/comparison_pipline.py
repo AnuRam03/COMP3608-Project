@@ -12,7 +12,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import MinMaxScaler
 from imblearn.over_sampling import SMOTE
 
-from DataSet3.HelpFunctions.metric_functions import evaluate_classification_model
+from HelpFunctions.metric_functions import evaluate_classification_model
 
 #figured out that adding the args and stuff actually shows it when u hover over the function, so i add it for better explanation :D
 def model_comparison(models_dict, scalers, samplers, X, y, numerical_cols, test_size=0.2, random_state=42, verbose=0):
