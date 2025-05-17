@@ -10,8 +10,9 @@ import matplotlib.pyplot as plt
 
 #standardizing value library
 from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import MinMaxScaler
 
-#resampling tecniques
+#resampling techniques
 from imblearn.over_sampling import SMOTE
 from imblearn.over_sampling import RandomOverSampler
 
@@ -30,6 +31,9 @@ def evaluate_classifier(model_values, model, model_name="New Classifier"):
     
     #get variables
     X_train, X_test, y_train, y_test = model_values
+    print('# train records: {}'.format(X_train.shape[0]))
+    print('# test records: {}'.format(X_test.shape[0]))
+    print("")
 
     #train the model
     model.fit(X_train, y_train)
@@ -51,6 +55,7 @@ def evaluate_classifier(model_values, model, model_name="New Classifier"):
     accuracy = accuracy_score(y_test, y_pred)
     recall = recall_score(y_test, y_pred)
     f1 = f1_score(y_test, y_pred)
+
     roc_auc = roc_auc_score(y_test, y_pred_proba)
 
     #print report
@@ -64,6 +69,21 @@ def evaluate_classifier(model_values, model, model_name="New Classifier"):
     print(f"F1 Score: {f1:.3f}")
     print(f"ROC AUC Score: {roc_auc:.3f}")
 
+    #output for Confusion Matrix
+    sns.heatmap(confusion_matrix(y_test, y_pred), annot=True, fmt='d', cmap='YlOrBr')
+    plt.ylabel('Actual')
+    plt.xlabel('Predicted')
+    plt.title('Confusion Matrix for ' + model_name)
+    plt.show()
+
+    #output for ROC CUR
+    fpr, tpr, _ = roc_curve(y_test, y_pred_proba)
+    plt.plot(fpr, tpr, label='AUC = {:.2f}'.format(roc_auc_score(y_test, y_pred_proba)))
+    plt.xlabel('False Positive Rate')
+    plt.ylabel('True Positive Rate')
+    plt.title('ROC Curve for ' + model_name)
+    plt.legend()
+    plt.show()
     
 
 
